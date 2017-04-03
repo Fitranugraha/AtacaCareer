@@ -21,6 +21,7 @@ gem "secure_headers", "~> 3.0"
 gem "sidekiq", ">= 4.2.0"
 gem "turbolinks", "~> 5"
 gem "devise"
+gem "pundit"
 
 group :production, :staging do
   gem "postmark-rails"

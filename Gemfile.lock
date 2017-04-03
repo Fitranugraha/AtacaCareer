@@ -230,6 +230,8 @@ GEM
       slop (~> 3.4)
     public_suffix (2.0.5)
     puma (3.7.1)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
@@ -395,6 +397,7 @@ DEPENDENCIES
   poltergeist
   postmark-rails
   puma (~> 3.0)
+  pundit
   rack-livereload
   rails (= 5.0.2)
   rb-fsevent
