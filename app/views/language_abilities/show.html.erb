@@ -1,0 +1,37 @@
+<% provide(:title) do %>
+  Language Ability #<%= @language_ability.id %>
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th class="col-sm-2">Profile</th>
+      <td><%= @language_ability.profile_id %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Language</th>
+      <td><%= @language_ability.language %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Speech</th>
+      <td><%= @language_ability.speech %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Writing</th>
+      <td><%= @language_ability.writing %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Reading</th>
+      <td><%= @language_ability.reading %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Notes</th>
+      <td><%= @language_ability.notes %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_language_ability_path(@language_ability), :class => "btn btn-primary" %>
+  <%= link_to "Back", language_abilities_path, :class => "btn btn-link" %>
+</p>

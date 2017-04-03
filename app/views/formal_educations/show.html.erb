@@ -1,0 +1,45 @@
+<% provide(:title) do %>
+  Formal Education #<%= @formal_education.id %>
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th class="col-sm-2">Profile</th>
+      <td><%= @formal_education.profile_id %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Level</th>
+      <td><%= @formal_education.level %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Institution</th>
+      <td><%= @formal_education.institution %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Start date</th>
+      <td><%= @formal_education.start_date %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">End date</th>
+      <td><%= @formal_education.end_date %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Certification</th>
+      <td><%= @formal_education.certification %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Faculty</th>
+      <td><%= @formal_education.faculty %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Department</th>
+      <td><%= @formal_education.department %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_formal_education_path(@formal_education), :class => "btn btn-primary" %>
+  <%= link_to "Back", formal_educations_path, :class => "btn btn-link" %>
+</p>

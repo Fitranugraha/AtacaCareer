@@ -1,0 +1,136 @@
+<% provide(:title) do %>
+  Profile #<%= @profile.id %>
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th class="col-sm-2">User</th>
+      <td><%= @profile.user_id %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">No</th>
+      <td><%= @profile.no %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Name</th>
+      <td><%= @profile.name %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Id no</th>
+      <td><%= @profile.id_no %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Nationality</th>
+      <td><%= @profile.nationality %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Tribe</th>
+      <td><%= @profile.tribe %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Place of birth</th>
+      <td><%= @profile.place_of_birth %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Date of birth</th>
+      <td><%= @profile.date_of_birth %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Height</th>
+      <td><%= @profile.height %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Weight</th>
+      <td><%= @profile.weight %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Blood</th>
+      <td><%= @profile.blood %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Sex</th>
+      <td><%= @profile.sex %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Married</th>
+      <td><%= @profile.married %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Religion</th>
+      <td><%= @profile.religion %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Address as</th>
+      <td><%= @profile.address_as_id %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Current address</th>
+      <td><%= @profile.current_address %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Phone</th>
+      <td><%= @profile.phone %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Mobile phone</th>
+      <td><%= @profile.mobile_phone %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Formal Educations</h3>
+
+<table class="table">
+	<thead class="thead-default">
+		<tr>
+			<th>Level</th>
+			<th>Institution</th>
+			<th>Start Date</th>
+			<th>End Date</th>
+			<th>Certification</th>
+			<th>Faculty</th>
+			<th>Departemen</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for builder in @profile.formal_educations %>
+			<tr>
+				<td><%= builder.level %></td>
+				<td><%= builder.institution %></td>
+				<td><%= builder.start_date %><td>
+				<td><%= builder.end_date %></td>
+				<td><%= builder.certification %></td>
+				<td><%= builder.faculty %><td>
+				<td><%= builder.department %><td>				
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<h3>Language Ability</h3>
+
+<table class="table">
+	<thead class="thead-default">
+		<tr>
+			<th>Language</th>
+			<th>Speech</th>
+			<th>Writing</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for builder in @profile.language_abilities %>
+			<tr>
+				<td><%= builder.language %></td>
+				<td><%= builder.speech %></td>
+				<td><%= builder.writing %><td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_profile_path(@profile), :class => "btn btn-primary" %>
+  <%= link_to "Back", profiles_path, :class => "btn btn-link" %>
+</p>

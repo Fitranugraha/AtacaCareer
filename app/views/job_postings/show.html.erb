@@ -1,0 +1,37 @@
+<% provide(:title) do %>
+  Job Posting #<%= @job_posting.id %>
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th class="col-sm-2">Code</th>
+      <td><%= @job_posting.code %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Position</th>
+      <td><%= @job_posting.position %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Description</th>
+      <td><%= @job_posting.description %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Requirement</th>
+      <td><%= @job_posting.requirement %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Post date</th>
+      <td><%= @job_posting.post_date %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Expired date</th>
+      <td><%= @job_posting.expired_date %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_job_posting_path(@job_posting), :class => "btn btn-primary" %>
+  <%= link_to "Back", job_postings_path, :class => "btn btn-link" %>
+</p>

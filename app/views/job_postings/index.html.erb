@@ -1,14 +1,4 @@
-<% provide(:title, "Home") %>
-<!-- <p>Find me in app/views/home/index.html.erb</p> -->
-
-<h2> Selamat Datang di Karir Rumah Ataca </h2> 
-
-<p> 
-Untuk dapat melamar posisi lowong atau mengikuti program yang kami tawarkan silahkan untuk mendaftar dan mengisi profile. Isilah profile dengan selengkap - lengkapnya karena akan sangat memudahkan kami untuk dapat menyeleksi calon pekerja untuk mengikuti tahap selanjutnya
-</p>
-
-<p>Posisi yang tersedia:</p>
-
+<% provide(:title, "Listing job_postings") %>
 
 <table class="table table-striped">
   <thead>
@@ -51,18 +41,6 @@ Untuk dapat melamar posisi lowong atau mengikuti program yang kami tawarkan sila
 
 <br>
 
-
-
-
-<% if current_user then %>
-
-	<% if current_user.profile then %>
-		<%= link_to edit_profile_path(@profile), :class => "btn btn-default" do %>
-  	  		<%= fa_icon("pencil", :text => "Edit Profile") %>
-    	<% end %>
-	<% else %>
-		<%= link_to new_profile_path, :class => "btn btn-default" do %>
-  	  		<%= fa_icon("plus", :text => "New Profile") %>
-		<% end %>
-	<% end %>
+<%= link_to new_job_posting_path, :class => "btn btn-default" do %>
+  <%= fa_icon("plus", :text => "New Job posting") %>
 <% end %>

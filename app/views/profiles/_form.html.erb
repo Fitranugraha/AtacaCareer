@@ -1,0 +1,49 @@
+
+<%= current_user.id %>
+
+<%= bootstrap_form_for(@profile) do |f| %>
+
+  <%= f.alert_message "Please review the problems below:" %>
+
+  <%= f.number_field :user_id %>
+  <%= f.text_field :no %>
+  <%= f.text_field :name %>
+  <%= f.text_field :id_no %>
+  <%= f.text_field :nationality %>
+  <%= f.text_field :tribe %>
+  <%= f.text_field :place_of_birth %>
+  <%= f.date_select :date_of_birth %>
+  <%= f.text_field :height %>
+  <%= f.text_field :weight %>
+  <%= f.text_field :blood %>
+  <%= f.text_field :sex %>
+  <%= f.text_field :married %>
+  <%= f.text_field :religion %>
+  <%= f.text_field :address_as_id %>
+  <%= f.text_field :current_address %>
+  <%= f.text_field :phone %>
+  <%= f.text_field :mobile_phone %>
+
+
+  <h3>Formal Educations</h3>
+
+    <%= f.fields_for :formal_educations do |builder| %>
+		<%= render 'formal_education_fields', f:builder %>
+    <% end %>
+	
+	<%= link_to_add_fields "Add Formal Education", f, :formal_educations  %>  
+  
+  <h3>Language Ability</h3>
+
+    <%= f.fields_for :language_abilities do |builder| %>
+		<%= render 'language_ability_fields', f:builder %>
+    <% end %>
+	
+	<%= link_to_add_fields "Add Language", f, :language_abilities  %>
+	
+
+
+  <%= f.primary %>
+  <%= link_to "Back", profiles_path, :class => "btn btn-link" %>
+
+<% end %>

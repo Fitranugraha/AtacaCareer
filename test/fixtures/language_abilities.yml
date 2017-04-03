@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: language_abilities
+#
+#  created_at :datetime         not null
+#  id         :integer          not null, primary key
+#  language   :string
+#  notes      :string
+#  profile_id :integer
+#  reading    :integer
+#  speech     :integer
+#  updated_at :datetime         not null
+#  writing    :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile_id: 1
+  language: MyString
+  speech: 1
+  writing: 1
+  reading: 1
+  notes: MyString
+
+two:
+  profile_id: 1
+  language: MyString
+  speech: 1
+  writing: 1
+  reading: 1
+  notes: MyString

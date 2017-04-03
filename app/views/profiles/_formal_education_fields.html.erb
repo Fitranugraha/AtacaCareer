@@ -1,0 +1,13 @@
+      <fieldset>
+	    <%= f.text_field :level %>
+	    <%= f.text_field :institution %>
+	    <%= f.date_select :start_date %>
+	    <%= f.date_select :end_date %>
+	    <%= f.text_field :certification %>
+	    <%= f.text_field :faculty %>
+	    <%= f.text_field :department %>
+
+        <%= f.hidden_field :_destroy %>
+        <%= link_to "remove", "#", class: "remove Language" %>
+      </fieldset>
+	  

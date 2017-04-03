@@ -1,0 +1,15 @@
+<%= bootstrap_form_for(@language_ability) do |f| %>
+
+  <%= f.alert_message "Please review the problems below:" %>
+
+  <%= f.number_field :profile_id %>
+  <%= f.text_field :language %>
+  <%= f.number_field :speech %>
+  <%= f.number_field :writing %>
+  <%= f.number_field :reading %>
+  <%= f.text_field :notes %>
+
+  <%= f.primary %>
+  <%= link_to "Back", language_abilities_path, :class => "btn btn-link" %>
+
+<% end %>

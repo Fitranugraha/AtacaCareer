@@ -1,0 +1,15 @@
+<%= bootstrap_form_for(@job_posting) do |f| %>
+
+  <%= f.alert_message "Please review the problems below:" %>
+
+  <%= f.text_field :code %>
+  <%= f.text_field :position %>
+  <%= f.text_field :description %>
+  <%= f.text_area :requirement, :rows => 5 %>
+  <%= f.date_select :post_date %>
+  <%= f.date_select :expired_date %>
+
+  <%= f.primary %>
+  <%= link_to "Back", job_postings_path, :class => "btn btn-link" %>
+
+<% end %>

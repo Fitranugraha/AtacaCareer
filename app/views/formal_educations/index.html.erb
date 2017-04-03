@@ -1,0 +1,50 @@
+<% provide(:title, "Listing formal_educations") %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Level</th>
+      <th>Institution</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Certification</th>
+      <th>Faculty</th>
+      <th>Department</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formal_educations.each do |formal_education| %>
+      <tr>
+        <td><%= formal_education.profile_id %></td>
+        <td><%= formal_education.level %></td>
+        <td><%= formal_education.institution %></td>
+        <td><%= formal_education.start_date %></td>
+        <td><%= formal_education.end_date %></td>
+        <td><%= formal_education.certification %></td>
+        <td><%= formal_education.faculty %></td>
+        <td><%= formal_education.department %></td>
+        <td>
+          <div class="btn-group">
+            <%= link_to formal_education, :class => "btn btn-xs btn-default" do %>
+              <%= fa_icon("eye", :text => "Show") %>
+            <% end %>
+            <%= link_to edit_formal_education_path(formal_education), :class => "btn btn-xs btn-default" do %>
+              <%= fa_icon("pencil", :text => "Edit") %>
+            <% end %>
+            <%= link_to formal_education, :class => "btn btn-xs btn-danger", :method => :delete, :data => { :confirm => "Are you sure you want to delete this formal_education?" } do %>
+              <%= fa_icon("trash-o", :text => "Destroy") %>
+            <% end %>
+          </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_formal_education_path, :class => "btn btn-default" do %>
+  <%= fa_icon("plus", :text => "New Formal education") %>
+<% end %>

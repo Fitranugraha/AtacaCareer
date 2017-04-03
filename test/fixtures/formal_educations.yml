@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: formal_educations
+#
+#  certification :string
+#  created_at    :datetime         not null
+#  department    :string
+#  end_date      :date
+#  faculty       :string
+#  id            :integer          not null, primary key
+#  institution   :string
+#  level         :string
+#  profile_id    :integer
+#  start_date    :date
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile_id: 1
+  level: MyString
+  institution: MyString
+  start_date: 2017-04-02
+  end_date: 2017-04-02
+  certification: MyString
+  faculty: MyString
+  department: MyString
+
+two:
+  profile_id: 1
+  level: MyString
+  institution: MyString
+  start_date: 2017-04-02
+  end_date: 2017-04-02
+  certification: MyString
+  faculty: MyString
+  department: MyString

@@ -1,0 +1,68 @@
+# == Schema Information
+#
+# Table name: profiles
+#
+#  address_as_id   :string
+#  blood           :string
+#  created_at      :datetime         not null
+#  current_address :string
+#  date_of_birth   :date
+#  height          :float
+#  id              :integer          not null, primary key
+#  id_no           :string
+#  married         :string
+#  mobile_phone    :string
+#  name            :string
+#  nationality     :string
+#  no              :string
+#  phone           :string
+#  place_of_birth  :string
+#  religion        :string
+#  sex             :string
+#  tribe           :string
+#  updated_at      :datetime         not null
+#  user_id         :integer
+#  weight          :float
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  'no': MyString
+  name: MyString
+  id_no: MyString
+  nationality: MyString
+  tribe: MyString
+  place_of_birth: MyString
+  date_of_birth: 2017-04-02
+  height: 1.5
+  weight: 1.5
+  blood: MyString
+  sex: MyString
+  married: MyString
+  religion: MyString
+  address_as_id: MyString
+  current_address: MyString
+  phone: MyString
+  mobile_phone: MyString
+
+two:
+  user_id: 1
+  'no': MyString
+  name: MyString
+  id_no: MyString
+  nationality: MyString
+  tribe: MyString
+  place_of_birth: MyString
+  date_of_birth: 2017-04-02
+  height: 1.5
+  weight: 1.5
+  blood: MyString
+  sex: MyString
+  married: MyString
+  religion: MyString
+  address_as_id: MyString
+  current_address: MyString
+  phone: MyString
+  mobile_phone: MyString

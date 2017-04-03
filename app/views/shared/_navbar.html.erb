@@ -29,10 +29,26 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Log in</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Help</a></li>
+          <%= navbar_link_to("Home",
+                             root_path,
+                             :active_when => { :controller => "home" }) %>
+		<% if user_signed_in? %>
+			<li>Logged in as <strong><%= current_user.email %></strong></li>
+            <li><%= navbar_link_to("Profile",
+                               profile_path(current_user),
+                               :active_when => { :controller => "profiles" }) %></li>
+			<li><%= link_to 'Pengaturan Akses', edit_user_registration_path %></li>
+        	<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+		<% else %>
+        	<li><%= link_to "Register", new_user_registration_path %></li>
+        	<li><%= link_to "Login", new_user_session_path %></li>
+        	<li><a href="#">Help</a></li>
+		<% end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </div>
+
+
+
+
